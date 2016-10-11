@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) NSString *passWord;
-@property (nonatomic, strong) RACSubject *loginSuccessObject;//登录成功的信号提供者
+@property (nonatomic, strong) RACSubject *loginSuccessObject;//登录成功的信号提供者，类似代理
 
 - (void)login;
 @end

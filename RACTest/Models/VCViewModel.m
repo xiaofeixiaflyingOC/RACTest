@@ -28,6 +28,8 @@
         [user setValue:self.userName forKey:@"userName"];
         [user setValue:self.passWord forKey:@"passWord"];
         [_loginSuccessObject sendNext:user];
+        //通知传递
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"PostLoginDataNotification" object:nil userInfo:@{@"data":@[self.userName,self.passWord]}];
     }
 
 }

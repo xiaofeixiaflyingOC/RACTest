@@ -99,6 +99,10 @@
         NSIndexPath *indexPath = (NSIndexPath*)x;
         NSLog(@"%li",(long)indexPath.row);
     }];
+    
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"PostLoginDataNotification" object:nil] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
 }
 
 
